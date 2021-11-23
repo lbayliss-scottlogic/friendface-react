@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import classes from './PostForm.module.css'
 
-function PostForm() {
+function PostForm(props) {
   const authorInputRef = useRef();
   const dateInputRef = useRef();
   const contentInputRef = useRef();
@@ -19,7 +19,7 @@ function PostForm() {
       content: contentField
     };
 
-    console.log(postData);
+    props.onNewPost(postData);
   }
 
   return (
