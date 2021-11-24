@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import PostList from "../components/PostList";
+import PostList from "../components/posts/PostList";
 
 function NewsFeed() {
   const [isLoading, setIsLoading] = useState(true);
