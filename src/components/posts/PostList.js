@@ -1,5 +1,5 @@
 import PostItem from "./PostItem";
-import classes from './PostList.module.css';
+import classes from "./PostList.module.css";
 
 function PostList(props) {
   return (
