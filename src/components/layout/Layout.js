@@ -1,9 +1,10 @@
 import classes from "./Layout.module.css";
+import NavigationBar from "./NavigationBar";
 
 function Layout(props) {
   return (
     <div>
-      <header className={classes.friendFaceHeader}>FriendFace</header>
+      <NavigationBar />
       <main className={classes.main}>{props.children}</main>
     </div>
   );
