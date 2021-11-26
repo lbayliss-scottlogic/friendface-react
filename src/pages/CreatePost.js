@@ -1,8 +1,23 @@
+import { useNavigate } from "react-router-dom";
+
 import PostForm from "../components/PostForm";
 
 function CreatePost() {
+  const navigate = useNavigate();
+
   function newPostHandler(postData) {
-      
+    fetch(
+      "https://friendface-react-default-rtdb.europe-west1.firebasedatabase.app/posts.json",
+      {
+        method: "POST",
+        body: JSON.stringify(postData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    ).then(() => {
+      navigate('/');
+    });
   }
 
   return (
