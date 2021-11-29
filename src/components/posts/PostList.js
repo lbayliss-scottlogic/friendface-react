@@ -6,7 +6,7 @@ function PostList(props) {
     <ul className={classes.list}>
       {props.posts.map((post) => (
         <PostItem
-          id={post.key}
+          id={post.id}
           author={post.author}
           date={post.date}
           content={post.content}
