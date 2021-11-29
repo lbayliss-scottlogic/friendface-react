@@ -7,9 +7,8 @@ function LikeButton(props) {
   const likeContext = useContext(LikesContext);
 
   const postIsLiked = likeContext.isLiked(props.id);
-  console.log("bool: ", postIsLiked);
 
-  function toggleLikeHandler() {
+  function toggleLikeHandler() {\
     if (postIsLiked) {
       likeContext.removeLike(props.id);
     } else {
