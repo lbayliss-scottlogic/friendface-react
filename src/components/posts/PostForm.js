@@ -9,14 +9,10 @@ function PostForm(props) {
   function submitHandler(event) {
     event.preventDefault();
 
-    const authorField = authorInputRef.current.value;
-    const dateField = dateInputRef.current.value;
-    const contentField = contentInputRef.current.value;
-
     const postData = {
-      author: authorField,
-      date: dateField,
-      content: contentField
+      author: authorInputRef.current.value,
+      date: dateInputRef.current.value,
+      content: contentInputRef.current.value
     };
 
     props.onNewPost(postData);
