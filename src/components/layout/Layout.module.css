@@ -2,10 +2,18 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  justify-content: center;
+  margin: auto;
   width: 40rem;
+}
+
+.layout {
+  margin: auto auto;
 }
 
 h1 {
   color: rgb(185, 185, 240);
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
