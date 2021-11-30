@@ -2,8 +2,9 @@ import { createContext, useState } from 'react';
 
 const LikesContext = createContext({
     likes: [],
-    addLike: (like) => {console.log("here")},
-    removeLike: (likeID) => {console.log("remove here")},
+    // Placeholders for auto-fill purposes - serve no function
+    addLike: (like) => {},
+    removeLike: (likeID) => {},
     isLiked: (likedID) => {}
 });
 

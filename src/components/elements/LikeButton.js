@@ -8,19 +8,13 @@ function LikeButton(props) {
 
   const postIsLiked = likeContext.isLiked(props.id);
 
-  function toggleLikeHandler() {\
-    if (postIsLiked) {
-      likeContext.removeLike(props.id);
-    } else {
-      likeContext.addLike({
-        id: props.id,
-      });
-    }
+  function toggleLikeHandler() {
+    postIsLiked ? likeContext.removeLike(props.id) : likeContext.addLike({ id: props.id });
   }
   
   return (
     <button onClick={toggleLikeHandler} className={classes.like}>
-      {postIsLiked ? <i class="bi bi-hand-thumbs-up-fill"></i> : <i class="bi bi-hand-thumbs-up"></i>}
+      <i class={postIsLiked ? "bi bi-hand-thumbs-up-fill" : "bi bi-hand-thumbs-up"}/>
     </button>
   );
 }
