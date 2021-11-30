@@ -12,7 +12,7 @@ function PostItem(props) {
         <LikeButton id={props.id} />
       </div>
       <div className={classes.containerContent}>
-        <EditableDiv id="edit" data={props}/>
+        <EditableDiv data={props}/>
         <span className={classes.date}>{props.date}</span>
       </div>
     </Post>
