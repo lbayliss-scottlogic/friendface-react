@@ -1,0 +1,22 @@
+.like {
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 0;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    justify-content: center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.like:hover {
+    color: rgb(238, 234, 234);
+}
+
+.like:active {
+    opacity: 80%;
+}
