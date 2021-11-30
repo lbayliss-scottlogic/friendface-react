@@ -14,11 +14,6 @@
     font-size: 1.2rem;
 }
 
-.content {
-    color: rgb(87, 87, 87);
-    padding: 2px;
-}
-
 .date {
     display: flex;
     font-size: 0.7rem;
@@ -26,4 +21,14 @@
     opacity: 0.5;
     padding: 2px;
     justify-content: flex-end;
+}
+
+.containerContent {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.containerContent:hover {
+    background-color: rgb(245, 244, 244);
 }

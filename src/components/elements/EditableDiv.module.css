@@ -1,0 +1,13 @@
+.edit {
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    float: right;
+}
+
+.content {
+    color: rgb(87, 87, 87);
+    padding: 2px;
+    word-wrap: break-word;
+}
