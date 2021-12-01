@@ -14,6 +14,9 @@ function NavigationBar() {
           <li>
               <Link to='/create-post'>Create Post</Link>
           </li>
+          <li>
+            <Link to='/tic-tac-toe'>Tic Tac Toe</Link>
+          </li>
         </ul>
       </nav>
     </header>
