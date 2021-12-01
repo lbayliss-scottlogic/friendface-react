@@ -1,0 +1,11 @@
+.boardRrow:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
