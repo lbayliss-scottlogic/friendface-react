@@ -11,7 +11,7 @@ function Square(props) {
   }
 
   return (
-    <button className={classes.square} onClick={renderMove}>
+    <button className={`${classes.square} ${classes[props.position]}`} onClick={renderMove}>
       {move}
     </button>
   );

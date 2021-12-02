@@ -1,6 +1,9 @@
 import Board from "./Board";
 
 function Game() {
+  const emptyGame = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
+  let gameProgress = emptyGame;
+
   function calculateWinner(gameProgress) {
     const winningLines = [
       [0, 1, 2],
@@ -14,17 +17,22 @@ function Game() {
     ];
 
     for (let i = 0; i < winningLines.length; i++) {
-        const [a, b, c] = winningLines[i];
-        if (gameProgress[a] != ' ' && gameProgress[a] && gameProgress[a] == gameProgress[b] && gameProgress[a] == gameProgress[c]) {
-            return true
-        }
+      const [a, b, c] = winningLines[i];
+      if (
+        gameProgress[a] !== " " &&
+        gameProgress[a] &&
+        gameProgress[a] === gameProgress[b] &&
+        gameProgress[a] === gameProgress[c]
+      ) {
+        return true;
+      }
     }
-    return false
+    return false;
   }
 
-  let gameProgress = [" ", " ", " ", " ", " ", " ", " ", " ", " "];
-
-  return <Board gameProgress={gameProgress} calculateWinner={calculateWinner}/>;
+  return (
+    <Board gameProgress={gameProgress} calculateWinner={calculateWinner} />
+  );
 }
 
 export default Game;

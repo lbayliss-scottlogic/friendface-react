@@ -1,0 +1,25 @@
+.modal {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(185, 185, 240);
+  padding: 1rem;
+  text-align: center;
+  width: 10rem;
+  position: fixed;
+  top: 50%;
+  z-index: 10;
+}
+
+.restartBtn {
+    background-color: transparent;
+    border: 2px solid rgb(185, 185, 240);
+    border-radius: 5px;
+    color: rgb(185, 185, 240);
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.restartBtn:hover {
+    background-color: rgb(245, 244, 244);
+}
