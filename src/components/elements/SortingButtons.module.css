@@ -1,0 +1,12 @@
+.layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonSet {
+    color: rgb(185, 185, 240);
+    font-size: 1.5rem;
+    padding: 10px;
+}
