@@ -7,23 +7,23 @@ function NewsFeed() {
 
   useEffect(() => {
     fetch(
-      "https://friendface-react-default-rtdb.europe-west1.firebasedatabase.app/posts.json"
+      "http://localhost:8080/users/getUserPosts"
     )
       .then((response) => {
         return response.json();
       })
       .then((data) => {
-          const posts = [];
-          for (const key in data) {
-              const post = {
-                  id: key,
-                  ...data[key]
-              }
-              posts.push(post);
-          }
-        setIsLoading(false);
-        setLoadedPosts(posts);
-      });
+        const posts = [];
+        for (const key in data) {
+            const post = {
+                id: key,
+                ...data[key]
+            }
+            posts.push(post);
+        }
+      setIsLoading(false);
+      setLoadedPosts(posts);
+    });
   }, []);
 
   if (isLoading) {
