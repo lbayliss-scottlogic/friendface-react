@@ -1,7 +1,9 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
-import classes from "./EditableDiv.module.css";
+import classes from "./EditableBox.module.css";
+import { useRef } from 'react';
 
-function EditableDiv(props) {
+function EditableBox(props) {
+  const contentRef = useRef();
   function editPostHandler(postData) {
     fetch(
       `https://friendface-react-default-rtdb.europe-west1.firebasedatabase.app/posts/${props.data.id}.json`,
@@ -12,11 +14,13 @@ function EditableDiv(props) {
           "Content-Type": "application/json",
         },
       }
-    );
-    // TODO: Feedback to the user that the post change was successful .then() ?
+    ).then(() => {
+      contentRef.current.className += ' fade-in';
+    });
   }
   return (
     <span
+    ref={contentRef}
       contentEditable={true}
       suppressContentEditableWarning={true}
       className={classes.content}
@@ -27,4 +31,4 @@ function EditableDiv(props) {
   );
 }
 
-export default EditableDiv;
+export default EditableBox;

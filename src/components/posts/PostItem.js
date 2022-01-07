@@ -1,7 +1,7 @@
 import classes from "./PostItem.module.css";
 import Post from "../elements/Post";
 import LikeButton from "../elements/LikeButton";
-import EditableDiv from '../elements/EditableDiv';
+import EditableBox from '../elements/EditableBox';
 
 function PostItem(props) {
   return (
@@ -9,10 +9,10 @@ function PostItem(props) {
       <div className={classes.containerHeader}>
         <span className={classes.author}>{props.author}</span>
         <span>{props.likes}</span>
-        <LikeButton id={props.id} />
+        <LikeButton id={props.id}/>
       </div>
       <div className={classes.containerContent}>
-        <EditableDiv data={props}/>
+        <EditableBox data={props}/>
         <span className={classes.date}>{props.date}</span>
       </div>
     </Post>
