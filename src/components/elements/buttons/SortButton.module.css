@@ -1,0 +1,10 @@
+.button {
+    background-color: transparent;
+    border: none;
+    color: rgb(185, 185, 240);
+    cursor: pointer;
+    font-size: 1.5rem;
+    outline: none;
+    margin-left: 5px;
+    margin-right: 5px;
+}
