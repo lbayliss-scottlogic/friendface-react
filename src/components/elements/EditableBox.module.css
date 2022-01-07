@@ -1,0 +1,26 @@
+.edit {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  float: right;
+}
+
+.content {
+  color: rgb(87, 87, 87);
+  padding: 2px;
+  word-wrap: break-word;
+}
+
+.fade-in {
+  animation: fadeIn 2s linear forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
