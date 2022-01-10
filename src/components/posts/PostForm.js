@@ -9,10 +9,19 @@ function PostForm(props) {
   function submitHandler(event) {
     event.preventDefault();
 
+    function idGenerator() {
+      var S4 = function() {
+         return (((1+Math.random())*0x10000)|0);
+      };
+      return (S4()+S4()+S4()+S4());
+  }
+
     const postData = {
       author: authorInputRef.current.value,
       date: dateInputRef.current.value,
-      content: contentInputRef.current.value
+      content: contentInputRef.current.value,
+      likes: 0,
+      id: idGenerator()
     };
 
     props.onNewPost(postData);
@@ -30,7 +39,7 @@ function PostForm(props) {
       </div>
       <div className={classes.control} >
         <label htmlFor="content-field">Content:</label>
-        <textarea required id="content-field" rows="4" ref={contentInputRef} />
+        <textarea required id="content-field" rows="4" ref={contentInputRef}/>
       </div>
       <div className={classes.actions}>
         <button id="submit-btn">Submit</button>

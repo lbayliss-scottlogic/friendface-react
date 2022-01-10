@@ -10,6 +10,7 @@ function PostList(props) {
           author={post.author}
           date={post.date}
           content={post.content}
+          liked={post.likes}
         />
       ))}
     </ul>

@@ -6,8 +6,11 @@ function CreatePost() {
   const navigate = useNavigate();
 
   function newPostHandler(postData) {
+
+    console.log(JSON.stringify(postData));
+
     fetch(
-      "https://friendface-react-default-rtdb.europe-west1.firebasedatabase.app/posts.json",
+      "http://localhost:8080/users/createUserPost",
       {
         method: "POST",
         body: JSON.stringify(postData),
