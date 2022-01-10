@@ -7,8 +7,6 @@ function CreatePost() {
 
   function newPostHandler(postData) {
 
-    console.log(JSON.stringify(postData));
-
     fetch(
       "http://localhost:8080/users/createUserPost",
       {
