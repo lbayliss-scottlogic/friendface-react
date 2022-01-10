@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PostList from "../components/posts/PostList";
+import SortingButtons from "../components/elements/SortingButtons";
 
 function NewsFeed() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,7 @@ function NewsFeed() {
   return (
     <div>
       <h1>News Feed</h1>
+      <SortingButtons setLoadedPosts={setLoadedPosts} />
       <PostList posts={loadedPosts} />
     </div>
   );
