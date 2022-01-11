@@ -1,0 +1,52 @@
+.square {
+  background: transparent;
+  border: 3px solid rgb(185, 185, 240);
+  cursor: pointer;
+  color: rgb(185, 185, 240);
+  float: left;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 34px;
+  height: 4rem;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 4rem;
+}
+
+.topLeft {
+  border-left: none;
+  border-top: none;
+}
+
+.topMiddle {
+  border-top: none;
+}
+
+.topRight {
+  border-right: none;
+  border-top: none;
+}
+
+.middleLeft {
+  border-left: none;
+}
+
+.middleRight {
+  border-right: none;
+}
+
+.bottomLeft {
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottomMiddle {
+  border-bottom: none;
+}
+
+.bottomRight {
+  border-bottom: none;
+  border-right: none;
+}

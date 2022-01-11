@@ -1,0 +1,18 @@
+.boardRrow:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.board {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.howTo {
+  font-size: 0.7rem;
+  font-style: italic;
+  padding-top: 15px;
+  text-align: center;
+}
