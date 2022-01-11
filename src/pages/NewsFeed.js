@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PostList from "../components/posts/PostList";
+import FilterBox from '../components/elements/FilterBox';
 
 function NewsFeed() {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,6 +38,7 @@ function NewsFeed() {
   return (
     <div>
       <h1>News Feed</h1>
+      <FilterBox feature={"content"} setLoadedPosts={setLoadedPosts} />
       <PostList posts={loadedPosts} />
     </div>
   );
