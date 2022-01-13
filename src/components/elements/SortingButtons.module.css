@@ -1,12 +1,16 @@
-.layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.attribute {
+    font-size: 1.5rem;
 }
 
 .buttonSet {
     color: rgb(185, 185, 240);
     font-size: 1.5rem;
     padding: 10px;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }

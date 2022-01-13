@@ -2,10 +2,14 @@ import { useState, useEffect } from "react";
 import PostList from "../components/posts/PostList";
 import FilterBox from '../components/elements/FilterBox';
 import SortingButtons from "../components/elements/SortingButtons";
+import MoreOptionsButton from "../components/elements/buttons/MoreOptionsButton";
+import classes from './NewsFeed.module.css';
 
 function NewsFeed() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedPosts, setLoadedPosts] = useState([]);
+
+  const [sortMethod, setSortMethod] = useState("author");
 
   useEffect(() => {
     fetch(
@@ -39,8 +43,12 @@ function NewsFeed() {
   return (
     <div>
       <h1>News Feed</h1>
-      <SortingButtons setLoadedPosts={setLoadedPosts} />
-      <FilterBox feature={"content"} setLoadedPosts={setLoadedPosts} />
+      <div className={classes.filterSort}>
+        <FilterBox feature={"content"} setLoadedPosts={setLoadedPosts} />
+        <SortingButtons className={classes.sortingButtons} sortMethod={sortMethod} setLoadedPosts={setLoadedPosts} />
+      </div>
+      <MoreOptionsButton setSortMethod={setSortMethod} />
+      <hr></hr>
       <PostList posts={loadedPosts} />
     </div>
   );

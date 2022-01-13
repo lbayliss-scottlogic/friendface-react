@@ -29,14 +29,9 @@ function SortingButtons(props) {
   return (
     <div className={classes.layout}>
       <div className={classes.buttonSet}>
-        <SortDownButton sort={() => {sort('dateAscending')}} />
-        Date
-        <SortUpButton sort={() => {sort('dateDescending')}} />
-      </div>
-      <div className={classes.buttonSet}>
-        <SortDownButton sort={() => {sort('authorAscending')}} />
-        Author
-        <SortUpButton sort={() => {sort('authorDescending')}} />
+        <SortDownButton sort={() => {sort(`${props.sortMethod}Ascending`)}} />
+        <span className={classes.attribute}>{props.sortMethod}</span>
+        <SortUpButton sort={() => {sort(`${props.sortMethod}Descending`)}} />
       </div>
     </div>
   );
