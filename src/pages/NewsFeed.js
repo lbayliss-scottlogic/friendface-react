@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import PostList from "../components/posts/PostList";
+import FilterBox from '../components/elements/FilterBox';
 import SortingButtons from "../components/elements/SortingButtons";
 import MoreOptionsButton from "../components/elements/buttons/MoreOptionsButton";
 import classes from './NewsFeed.module.css';
@@ -43,7 +44,7 @@ function NewsFeed() {
     <div>
       <h1>News Feed</h1>
       <div className={classes.filterSort}>
-        <div className={classes.filterBox}>Placeholder</div>
+        <FilterBox feature={"content"} setLoadedPosts={setLoadedPosts} />
         <SortingButtons className={classes.sortingButtons} sortMethod={sortMethod} setLoadedPosts={setLoadedPosts} />
       </div>
       <MoreOptionsButton setSortMethod={setSortMethod} />

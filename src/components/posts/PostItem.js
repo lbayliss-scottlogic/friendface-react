@@ -13,7 +13,7 @@ function PostItem(props) {
       </div>
       <div className={classes.containerContent}>
         <EditableBox data={props}/>
-        <span className={classes.date}>{props.date}</span>
+        <span className={classes.date}>{props.date.split(' ')[0]}</span>
       </div>
     </Post>
   );
